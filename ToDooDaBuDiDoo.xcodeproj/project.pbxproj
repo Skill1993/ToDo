@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F320B842161843500FD2A7D /* GDGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F320B832161843500FD2A7D /* GDGradient.swift */; };
 		3FBCB4DE21616F9F00B71C51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCB4DD21616F9F00B71C51 /* AppDelegate.swift */; };
 		3FBCB4E021616F9F00B71C51 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCB4DF21616F9F00B71C51 /* WelcomeController.swift */; };
 		3FBCB4E621616FA000B71C51 /* ToDooDaBuDiDoo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCB4E421616FA000B71C51 /* ToDooDaBuDiDoo.xcdatamodeld */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F320B832161843500FD2A7D /* GDGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDGradient.swift; sourceTree = "<group>"; };
 		3FBCB4DA21616F9F00B71C51 /* ToDooDaBuDiDoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDooDaBuDiDoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FBCB4DD21616F9F00B71C51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FBCB4DF21616F9F00B71C51 /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				3FBCB4E921616FDF00B71C51 /* LaunchScreen.storyboard */,
 				3FBCB4EC21616FE000B71C51 /* Info.plist */,
 				3FBCB4E421616FA000B71C51 /* ToDooDaBuDiDoo.xcdatamodeld */,
+				3F320B832161843500FD2A7D /* GDGradient.swift */,
 			);
 			path = ToDooDaBuDiDoo;
 			sourceTree = "<group>";
@@ -134,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F320B842161843500FD2A7D /* GDGradient.swift in Sources */,
 				3FBCB4E621616FA000B71C51 /* ToDooDaBuDiDoo.xcdatamodeld in Sources */,
 				3FBCB4E021616F9F00B71C51 /* WelcomeController.swift in Sources */,
 				3FBCB4DE21616F9F00B71C51 /* AppDelegate.swift in Sources */,
