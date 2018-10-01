@@ -13,6 +13,7 @@
 		3F320B8D2162389000FD2A7D /* Raleway-v4020-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F320B8C2162388F00FD2A7D /* Raleway-v4020-Regular.otf */; };
 		3F320B8F21623B9400FD2A7D /* Raleway-v4020-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3F320B8E21623B9400FD2A7D /* Raleway-v4020-SemiBold.otf */; };
 		3F320B912162A31300FD2A7D /* GDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F320B902162A31300FD2A7D /* GDButton.swift */; };
+		3F320B932162B3FA00FD2A7D /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F320B922162B3FA00FD2A7D /* ListController.swift */; };
 		3FBCB4DE21616F9F00B71C51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCB4DD21616F9F00B71C51 /* AppDelegate.swift */; };
 		3FBCB4E021616F9F00B71C51 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCB4DF21616F9F00B71C51 /* WelcomeController.swift */; };
 		3FBCB4E621616FA000B71C51 /* ToDooDaBuDiDoo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCB4E421616FA000B71C51 /* ToDooDaBuDiDoo.xcdatamodeld */; };
@@ -27,6 +28,7 @@
 		3F320B8C2162388F00FD2A7D /* Raleway-v4020-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-v4020-Regular.otf"; sourceTree = "<group>"; };
 		3F320B8E21623B9400FD2A7D /* Raleway-v4020-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-v4020-SemiBold.otf"; sourceTree = "<group>"; };
 		3F320B902162A31300FD2A7D /* GDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDButton.swift; sourceTree = "<group>"; };
+		3F320B922162B3FA00FD2A7D /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		3FBCB4DA21616F9F00B71C51 /* ToDooDaBuDiDoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDooDaBuDiDoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FBCB4DD21616F9F00B71C51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FBCB4DF21616F9F00B71C51 /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				3FBCB4E921616FDF00B71C51 /* LaunchScreen.storyboard */,
 				3FBCB4EC21616FE000B71C51 /* Info.plist */,
 				3FBCB4E421616FA000B71C51 /* ToDooDaBuDiDoo.xcdatamodeld */,
+				3F320B922162B3FA00FD2A7D /* ListController.swift */,
 			);
 			path = ToDooDaBuDiDoo;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				3F320B8A21622E0700FD2A7D /* GDLabel.swift in Sources */,
 				3FBCB4E021616F9F00B71C51 /* WelcomeController.swift in Sources */,
 				3FBCB4DE21616F9F00B71C51 /* AppDelegate.swift in Sources */,
+				3F320B932162B3FA00FD2A7D /* ListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -49,7 +49,9 @@ class WelcomeController: UIViewController {
         }) { (_) in
             UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
                 self.nextButton.transform = CGAffineTransform(scaleX: 1, y: 1)
-            })
+            }) { (_) in
+                self.present(ListController(), animated: true, completion: nil)
+            }
         }
     }
     
