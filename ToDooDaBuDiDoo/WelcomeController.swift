@@ -42,8 +42,21 @@ class WelcomeController: UIViewController {
     
     let copyrightLabel = GDLabel(title: "© 2018 | NAZ Apps", color: .grayOne , size: 14, textAlign: .center)
     
+    @objc func handleNext() {
+//        print("trying to handle next")
+        UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+            self.nextButton.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
+        }) { (_) in
+            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
+                self.nextButton.transform = CGAffineTransform(scaleX: 1, y: 1)
+            })
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nextButton.addTarget(self, action: #selector(self.handleNext), for: [.touchUpInside, .touchUpOutside])
         
         view.backgroundColor = .white
         
