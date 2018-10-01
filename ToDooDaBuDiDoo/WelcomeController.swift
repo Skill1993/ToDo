@@ -14,27 +14,39 @@ class WelcomeController: UIViewController {
         let view = GDGradient()
         //view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .cyan
-        view.layer.cornerRadius = 6
+        view.layer.cornerRadius = 24
         return view
     }()
     
 //    let titleLabel = GDLabel()
+    
     let titleLabel = GDLabel(title: "TO DO DAT", size:24, textAlign: .center)
+    
 //    let infoLabel = GDLabel(title: "WELCOME. TO DO DAT IS A TO DO LIST.\nA REALLY DOPE TO DO LIST", size: 14, textAlign: .center)
+    
     let infoLabel: UILabel = {
         let label = GDLabel(title: "WELCOME. TO DO DAT IS A TO DO LIST.\nA REALLY DOPE TO DO LIST", size: 14, textAlign: .center)
         label.numberOfLines = 2
         return label
     }()
     
-    let nextButton = UIButton()
+    let nextButton = GDButton(title: "START WINNING")
     
-    let copyrightLabel = GDLabel(title: "© 2018 | NAZ Apps", color: .grayZero, size: 14, textAlign: .center)
+    /*= {
+        let button = UIButton()
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        button.backgroundColor = .white
+//        button.setTitle("START WINNING", for: .normal)
+        return button
+    }()*/
+    
+    let copyrightLabel = GDLabel(title: "© 2018 | NAZ Apps", color: .grayOne , size: 14, textAlign: .center)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
+        
 //        titleLabel.text = "ToDooDaBuDiDoo"
 //        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -58,6 +70,10 @@ class WelcomeController: UIViewController {
         infoLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
         bg.addSubview(nextButton)
+        nextButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        nextButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        nextButton.centerXAnchor.constraint(equalTo: bg.centerXAnchor).isActive = true
+        nextButton.bottomAnchor.constraint(equalTo: bg.bottomAnchor, constant: -60).isActive = true
         
         view.addSubview(copyrightLabel)
         copyrightLabel.widthAnchor.constraint(equalToConstant: 200).isActive = true
