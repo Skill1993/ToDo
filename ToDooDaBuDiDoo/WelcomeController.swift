@@ -18,14 +18,15 @@ class WelcomeController: UIViewController {
         return view
     }()
     
-    let titleLabel = UILabel()
+//    let titleLabel = GDLabel()
+    let titleLabel = GDLabel(title: "TO DO DAT", size:24, textAlign: .center)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
-        titleLabel.text = "ToDooDaBuDiDoo"
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+//        titleLabel.text = "ToDooDaBuDiDoo"
+//        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(bg)
         bg.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
