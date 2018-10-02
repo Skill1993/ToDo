@@ -11,6 +11,7 @@ import UIKit
 class GDButton: UIButton {
     
     var title: String!
+    var type: ButtonOptions!
     
     init(title:String = "button text", frame: CGRect = .zero, type: ButtonOptions = .roundedText) {
         super.init(frame: .zero)
@@ -18,26 +19,39 @@ class GDButton: UIButton {
             self.translatesAutoresizingMaskIntoConstraints = false
         }
         
-        switch type {
-            case .roundedText:
-                self.title = title
-                self.phaseTwo()
-            case .squareIcon:
-                break;
-            default: break;
-        }
+        self.title = title
+        self.type = type
+        self.phaseTwo()
         
     }
     
     func phaseTwo() {
-//        self.translatesAutoresizingMaskIntoConstraints = false
         self.setTitle(self.title, for: .normal)
         self.setTitleColor(.grayZero, for: .normal)
-        self.layer.cornerRadius = 20
         self.backgroundColor = .white
         if let titleLabel = self.titleLabel {
             titleLabel.font = UIFont(name: "Raleway-v4020-Regular", size: 16)
         }
+        switch self.type {
+        case .roundedText?:
+            self.roundedText()
+        case .squareIcon?:
+            self.squareIcon()
+        default: break
+        }
+    }
+    
+    func squareIcon() {
+//        self.setTitleColor(.white, for: .normal)
+//        this is where we will set the custom icons
+        if let titleLabel = self.titleLabel {
+            titleLabel.font = UIFont(name: "Raleway-v4020-Regular", size: 24)
+        }
+    }
+    
+    func roundedText() {
+//        self.translatesAutoresizingMaskIntoConstraints = false
+        self.layer.cornerRadius = 20
     }
     
     required init?(coder aDecoder: NSCoder) {
