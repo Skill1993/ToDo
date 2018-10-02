@@ -27,10 +27,11 @@ class GDGradient: UIView {
     //  #3A7BD5
     //  #64E4FF
     
-    override init (frame: CGRect) {
+    override init (frame: CGRect = .zero) {
         super.init(frame: frame)
-        
-        self.translatesAutoresizingMaskIntoConstraints = false
+        if frame == .zero{
+            translatesAutoresizingMaskIntoConstraints = false
+        }
         if let layer = self.layer as? CAGradientLayer {
             //layer.colors = self.colors
             layer.colors = self.hexColors
