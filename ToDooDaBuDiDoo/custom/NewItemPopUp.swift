@@ -11,6 +11,7 @@ import UIKit
 class NewItemPopUp: GDGradient {
     
     let cancel = GDButton(title: " cancel ", type: .roundedText, radius: 4)
+    let add = GDButton(title: " add ", type: .roundedText, radius: 4)
     
     override init(frame: CGRect = .zero){
         super.init(frame: frame)
@@ -24,6 +25,10 @@ class NewItemPopUp: GDGradient {
         cancel.topAnchor.constraint(equalTo: topAnchor, constant: inset).isActive = true
         cancel.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
+        addSubview(add)
+        add.rightAnchor.constraint(equalTo: rightAnchor, constant: -inset).isActive = true
+        add.topAnchor.constraint(equalTo: topAnchor, constant: inset).isActive = true
+        add.heightAnchor.constraint(equalToConstant: 20).isActive = true
     }
     
     required init?(coder aDecoder: NSCoder) {
