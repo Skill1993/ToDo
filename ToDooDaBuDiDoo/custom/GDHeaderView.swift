@@ -14,6 +14,7 @@ class GDHeaderView: UIView {
     let titleLabel = GDLabel(size: 14)
     let subtitleLabel = GDLabel(size:24)
     let addButton = GDButton(title: "+", type: .squareIcon)
+    var delegate: GDHeaderDelegate?
     
     init(frame: CGRect = .zero, title: String = "Header title", subtitle: String = "Header subtitle") {
         super.init(frame: frame)
@@ -23,7 +24,7 @@ class GDHeaderView: UIView {
         self.titleLabel.text = title
         self.subtitleLabel.text = subtitle
         setupLayout()
-        
+
     }
     
     func setupLayout() {
@@ -51,6 +52,14 @@ class GDHeaderView: UIView {
         addButton.heightAnchor.constraint(equalToConstant: 24).isActive = true
         addButton.widthAnchor.constraint(equalTo: addButton.heightAnchor, multiplier: 1).isActive = true
         
+        addButton.addTarget(delegate, action: #selector(self.handleAddButton), for: .touchUpInside)
+        
+    }
+    
+    @objc func handleAddButton() {
+        if let delegate = self.delegate {
+            delegate.addItem()
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
