@@ -8,18 +8,21 @@
 
 import UIKit
 
-class NewItemPopUp: GDGradient {
+class GDNewItemPopUp: GDGradient {
     
     let cancel = GDButton(title: " cancel ", type: .roundedText, radius: 4)
     let add = GDButton(title: "  add  ", type: .roundedText, radius: 4)
     let textField = GDTextField(placeholder: " go buy IKEA frames", inset: 4)
+    var delegate: GDNewItemDelegate?
     
     @objc func handleCancel(){
-        print("trying to handle cancel")
+        textField.resignFirstResponder()
     }
     
     @objc func handleAdd(){
-        print("trying to handle add")
+        if let delegate = self.delegate, let textFieldText = self.textField.text {
+            delegate.addItemToList(text: textFieldText)
+        }
     }
     
     override init(frame: CGRect = .zero){

@@ -58,7 +58,7 @@ class GDHeaderView: UIView {
     
     @objc func handleAddButton() {
         if let delegate = self.delegate {
-            delegate.addItem()
+            delegate.openAddItemPopup()
         }
     }
     
