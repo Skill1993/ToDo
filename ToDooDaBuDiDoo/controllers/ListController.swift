@@ -21,6 +21,13 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
     let header = GDHeaderView(title: "Stuff to get done", subtitle: "4 left")
     let popup = GDNewItemPopUp()
     
+    let bg: UIView = {
+        let view = GDGradient()
+        view.backgroundColor = .cyan
+        view.layer.cornerRadius = 24
+        return view
+    }()
+    
     var keyboardHeight: CGFloat = 260
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,6 +44,7 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.backgroundColor = .white
         
         view.addSubview(header)
@@ -44,6 +52,12 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
         header.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         header.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         header.heightAnchor.constraint(equalToConstant: 120).isActive = true
+        
+        view.addSubview(bg)
+        bg.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
+        bg.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 20).isActive = true
+        bg.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
+        bg.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100).isActive = true
         
         view.addSubview(popup)
         popup.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
