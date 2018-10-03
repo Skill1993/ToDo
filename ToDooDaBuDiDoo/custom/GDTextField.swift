@@ -24,23 +24,26 @@ class GDTextField: UITextField {
     }
     
     override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
-        //return UIEdgeInsetsInsetRect(bounds, UIEdgeInsets(top: 0, left: 4, bottom: 0, right: 0))
-        let container = CGRect(x: 0, y: 0, width: 306, height: 28)
-        self.textColor = .grayZero
+//        return UIEdgeInsetsInsetRect(bounds, UIEdgeInsets(top: 0, left: 4, bottom: 0, right: 0))
+        return bounds.inset(by: self.insets)
+//        let container = CGRect(x: 0, y: 0, width: 306, height: 28)
+//        self.textColor = .grayZero
         //let margin = UIEdgeInsets(top: 0, left: 4, bottom: 0, right: 0)
-        return container.inset(by: self.insets)
+//        return container.inset(by: self.insets)
     }
     
     override func textRect(forBounds bounds: CGRect) -> CGRect {
-        let container = CGRect(x: 0, y: 0, width: 306, height: 28)
-        self.textColor = .grayZero
-        return container.inset(by: self.insets)
+//        let container = CGRect(x: 0, y: 0, width: 306, height: 28)
+//        self.textColor = .grayZero
+//        return container.inset(by: self.insets)
+        return bounds.inset(by: self.insets)
     }
     
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
-        let container = CGRect(x: 0, y: 0, width: 306, height: 28)
-        self.textColor = .grayZero
-        return container.inset(by: self.insets)
+//        let container = CGRect(x: 0, y: 0, width: 306, height: 28)
+//        self.textColor = .grayZero
+//        return container.inset(by: self.insets)
+        return bounds.inset(by: self.insets)
     }
     
     required init?(coder aDecoder: NSCoder) {
