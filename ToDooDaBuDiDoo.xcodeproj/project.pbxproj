@@ -18,6 +18,7 @@
 		3F320B982163617800FD2A7D /* optionset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F320B972163617800FD2A7D /* optionset.swift */; };
 		3F320B9A2163847A00FD2A7D /* protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F320B992163847A00FD2A7D /* protocol.swift */; };
 		3F320B9C2163B19E00FD2A7D /* NewItemPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F320B9B2163B19E00FD2A7D /* NewItemPopUp.swift */; };
+		3F320B9E2164BFDA00FD2A7D /* GDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F320B9D2164BFDA00FD2A7D /* GDTextField.swift */; };
 		3FBCB4DE21616F9F00B71C51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCB4DD21616F9F00B71C51 /* AppDelegate.swift */; };
 		3FBCB4E021616F9F00B71C51 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCB4DF21616F9F00B71C51 /* WelcomeController.swift */; };
 		3FBCB4E621616FA000B71C51 /* ToDooDaBuDiDoo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCB4E421616FA000B71C51 /* ToDooDaBuDiDoo.xcdatamodeld */; };
@@ -37,6 +38,7 @@
 		3F320B972163617800FD2A7D /* optionset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = optionset.swift; sourceTree = "<group>"; };
 		3F320B992163847A00FD2A7D /* protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = protocol.swift; sourceTree = "<group>"; };
 		3F320B9B2163B19E00FD2A7D /* NewItemPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewItemPopUp.swift; sourceTree = "<group>"; };
+		3F320B9D2164BFDA00FD2A7D /* GDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDTextField.swift; sourceTree = "<group>"; };
 		3FBCB4DA21616F9F00B71C51 /* ToDooDaBuDiDoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDooDaBuDiDoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FBCB4DD21616F9F00B71C51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FBCB4DF21616F9F00B71C51 /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				3F320B902162A31300FD2A7D /* GDButton.swift */,
 				3F320B942162C04000FD2A7D /* GDHeaderView.swift */,
 				3F320B9B2163B19E00FD2A7D /* NewItemPopUp.swift */,
+				3F320B9D2164BFDA00FD2A7D /* GDTextField.swift */,
 			);
 			path = custom;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				3F320B842161843500FD2A7D /* GDGradient.swift in Sources */,
 				3FBCB4E621616FA000B71C51 /* ToDooDaBuDiDoo.xcdatamodeld in Sources */,
 				3F320B8A21622E0700FD2A7D /* GDLabel.swift in Sources */,
+				3F320B9E2164BFDA00FD2A7D /* GDTextField.swift in Sources */,
 				3FBCB4E021616F9F00B71C51 /* WelcomeController.swift in Sources */,
 				3F320B952162C04000FD2A7D /* GDHeaderView.swift in Sources */,
 				3F320B982163617800FD2A7D /* optionset.swift in Sources */,
