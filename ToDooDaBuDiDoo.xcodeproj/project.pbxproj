@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F04E3522165A35400F7D580 /* GDListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04E3512165A35400F7D580 /* GDListCell.swift */; };
 		3F04E3552165A5CA00F7D580 /* toDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04E3542165A5CA00F7D580 /* toDo.swift */; };
+		3F04E35721662B6700F7D580 /* GDCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04E35621662B6700F7D580 /* GDCheckBox.swift */; };
 		3F320B842161843500FD2A7D /* GDGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F320B832161843500FD2A7D /* GDGradient.swift */; };
 		3F320B87216187E700FD2A7D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F320B86216187E700FD2A7D /* Extension.swift */; };
 		3F320B8A21622E0700FD2A7D /* GDLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F320B8921622E0700FD2A7D /* GDLabel.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		3F04E3512165A35400F7D580 /* GDListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDListCell.swift; sourceTree = "<group>"; };
 		3F04E3542165A5CA00F7D580 /* toDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDo.swift; sourceTree = "<group>"; };
+		3F04E35621662B6700F7D580 /* GDCheckBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDCheckBox.swift; sourceTree = "<group>"; };
 		3F320B832161843500FD2A7D /* GDGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDGradient.swift; sourceTree = "<group>"; };
 		3F320B86216187E700FD2A7D /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		3F320B8921622E0700FD2A7D /* GDLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDLabel.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				3F320B9D2164BFDA00FD2A7D /* GDTextField.swift */,
 				3F8C117321650587008BAA4D /* GDTableView.swift */,
 				3F04E3512165A35400F7D580 /* GDListCell.swift */,
+				3F04E35621662B6700F7D580 /* GDCheckBox.swift */,
 			);
 			path = custom;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				3F320B87216187E700FD2A7D /* Extension.swift in Sources */,
 				3F04E3522165A35400F7D580 /* GDListCell.swift in Sources */,
 				3F320B912162A31300FD2A7D /* GDButton.swift in Sources */,
+				3F04E35721662B6700F7D580 /* GDCheckBox.swift in Sources */,
 				3F320B9C2163B19E00FD2A7D /* GDNewItemPopUp.swift in Sources */,
 				3F320B842161843500FD2A7D /* GDGradient.swift in Sources */,
 				3FBCB4E621616FA000B71C51 /* ToDooDaBuDiDoo.xcdatamodeld in Sources */,

@@ -20,11 +20,11 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
     
     let header = GDHeaderView(title: "Stuff to get done", subtitle: "4 left")
     let popup = GDNewItemPopUp()
-    
-    let bg: UIView = {
+    let tbInset:CGFloat = 16
+    lazy var bg: UIView = {
         let view = GDGradient()
         view.backgroundColor = .cyan
-        view.layer.cornerRadius = 24
+        view.layer.cornerRadius = tbInset
         return view
     }()
     
@@ -45,8 +45,6 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
         self.keyboardHeight = keyboardSize.height
 //        print(self.keyboardHeight)
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,10 +71,10 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
         bg.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100).isActive = true
         
         view.addSubview(listTable)
-        listTable.leftAnchor.constraint(equalTo: bg.leftAnchor, constant: 8).isActive = true
-        listTable.topAnchor.constraint(equalTo: bg.topAnchor, constant: 8).isActive = true
-        listTable.rightAnchor.constraint(equalTo: bg.rightAnchor, constant: -8).isActive = true
-        listTable.bottomAnchor.constraint(equalTo: bg.bottomAnchor, constant: -8).isActive = true
+        listTable.leftAnchor.constraint(equalTo: bg.leftAnchor, constant: tbInset).isActive = true
+        listTable.topAnchor.constraint(equalTo: bg.topAnchor, constant: tbInset).isActive = true
+        listTable.rightAnchor.constraint(equalTo: bg.rightAnchor, constant: -1 * tbInset).isActive = true
+        listTable.bottomAnchor.constraint(equalTo: bg.bottomAnchor, constant: -1 * tbInset).isActive = true
         
         view.addSubview(popup)
         popup.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
@@ -113,9 +111,13 @@ extension ListController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID, for: indexPath) as! GDListCell
 //            tableView.cellForRow(at: indexPath) as! UITableViewCell
-        cell.textLabel?.text = self.listData[indexPath.row].title
+//        cell.textLabel?.text = self.listData[indexPath.row].title
+        cell.toDo = self.listData[indexPath.row]
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 42
+    }
     
 }
