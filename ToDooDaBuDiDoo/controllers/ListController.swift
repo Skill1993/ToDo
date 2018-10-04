@@ -32,6 +32,8 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
     
     let CELL_ID = "cell_id"
     
+    var listData = ["First Item","Hey dude","It's Lit fam"]
+    
     var keyboardHeight: CGFloat = 260
     
     override func viewDidAppear(_ animated: Bool) {
@@ -82,7 +84,7 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
         
         listTable.delegate = self
         listTable.dataSource = self
-        listTable.register(UITableViewCell.self, forCellReuseIdentifier: CELL_ID)
+        listTable.register(GDListCell.self, forCellReuseIdentifier: CELL_ID)
     }
 }
 
@@ -98,13 +100,13 @@ extension ListController: UITextFieldDelegate {
 
 extension ListController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return self.listData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID, for: indexPath) as! GDListCell
 //            tableView.cellForRow(at: indexPath) as! UITableViewCell
-        cell.textLabel?.text = "Hello, I am a cell boi"
+        cell.textLabel?.text = self.listData[indexPath.row]
         return cell
     }
     
