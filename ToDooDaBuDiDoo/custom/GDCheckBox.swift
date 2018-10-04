@@ -10,10 +10,13 @@ import UIKit
 
 class GDCheckBox: UIButton {
     
+    var delegate: GDListCellDelegate?
+    var id: Int?
+    
     var toggled:Bool?{
         didSet {
             if let toggled = toggled {
-                UIView.animate(withDuration: 0.35){
+                UIView.animate(withDuration: 0.2){
                     if toggled{
                         self.backgroundColor = .green
                         self.setImage(UIImage(named:"done-icon"), for: .normal)
@@ -27,8 +30,9 @@ class GDCheckBox: UIButton {
     }
     
     @objc func toggleStatus() {
-        if let status = toggled {
+        if let status = toggled, let delegate = self.delegate, let id = self.id {
             toggled = !status
+            delegate.toggleToDo(id: id, status: !status)
         }
     }
     
