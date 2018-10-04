@@ -32,7 +32,7 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
     
     let CELL_ID = "cell_id"
     
-    var listData = ["First Item","Hey dude","It's Lit fam"]
+    var listData: [ToDo] = [ToDo]()
     
     var keyboardHeight: CGFloat = 260
     
@@ -50,6 +50,13 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        listData = [
+            ToDo(id: 0, title: "First Item", status: false),
+            ToDo(id: 1, title: "Hey Dude", status: false),
+            ToDo(id: 2, title: "It's Lit fam", status: false)
+            //["First Item","Hey dude","It's Lit fam"]
+        ]
         
         view.backgroundColor = .white
         
@@ -106,7 +113,7 @@ extension ListController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID, for: indexPath) as! GDListCell
 //            tableView.cellForRow(at: indexPath) as! UITableViewCell
-        cell.textLabel?.text = self.listData[indexPath.row]
+        cell.textLabel?.text = self.listData[indexPath.row].title
         return cell
     }
     

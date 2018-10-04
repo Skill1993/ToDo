@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F04E3522165A35400F7D580 /* GDListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04E3512165A35400F7D580 /* GDListCell.swift */; };
+		3F04E3552165A5CA00F7D580 /* toDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F04E3542165A5CA00F7D580 /* toDo.swift */; };
 		3F320B842161843500FD2A7D /* GDGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F320B832161843500FD2A7D /* GDGradient.swift */; };
 		3F320B87216187E700FD2A7D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F320B86216187E700FD2A7D /* Extension.swift */; };
 		3F320B8A21622E0700FD2A7D /* GDLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F320B8921622E0700FD2A7D /* GDLabel.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		3F04E3512165A35400F7D580 /* GDListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDListCell.swift; sourceTree = "<group>"; };
+		3F04E3542165A5CA00F7D580 /* toDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDo.swift; sourceTree = "<group>"; };
 		3F320B832161843500FD2A7D /* GDGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDGradient.swift; sourceTree = "<group>"; };
 		3F320B86216187E700FD2A7D /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		3F320B8921622E0700FD2A7D /* GDLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDLabel.swift; sourceTree = "<group>"; };
@@ -63,6 +65,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F04E3532165A57E00F7D580 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				3F04E3542165A5CA00F7D580 /* toDo.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		3F320B85216187AB00FD2A7D /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +135,7 @@
 		3FBCB4DC21616F9F00B71C51 /* ToDooDaBuDiDoo */ = {
 			isa = PBXGroup;
 			children = (
+				3F04E3532165A57E00F7D580 /* model */,
 				3FBCB4DD21616F9F00B71C51 /* AppDelegate.swift */,
 				3F320B8B216235C700FD2A7D /* fonts */,
 				3F320B85216187AB00FD2A7D /* Extension */,
@@ -221,6 +232,7 @@
 				3FBCB4E021616F9F00B71C51 /* WelcomeController.swift in Sources */,
 				3F8C117421650588008BAA4D /* GDTableView.swift in Sources */,
 				3F320B952162C04000FD2A7D /* GDHeaderView.swift in Sources */,
+				3F04E3552165A5CA00F7D580 /* toDo.swift in Sources */,
 				3F320B982163617800FD2A7D /* optionset.swift in Sources */,
 				3F320B9A2163847A00FD2A7D /* protocol.swift in Sources */,
 				3FBCB4DE21616F9F00B71C51 /* AppDelegate.swift in Sources */,
