@@ -12,17 +12,12 @@ class WelcomeController: UIViewController {
 
     let bg: UIView = {
         let view = GDGradient()
-        //view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .cyan
         view.layer.cornerRadius = 24
         return view
     }()
     
-//    let titleLabel = GDLabel()
-    
     let titleLabel = GDLabel(title: "TO DO DAT", size:24, textAlign: .center)
-    
-//    let infoLabel = GDLabel(title: "WELCOME. TO DO DAT IS A TO DO LIST.\nA REALLY DOPE TO DO LIST", size: 14, textAlign: .center)
     
     let infoLabel: UILabel = {
         let label = GDLabel(title: "WELCOME. TO DO DAT IS A TO DO LIST.\nA REALLY DOPE TO DO LIST", size: 14, textAlign: .center)
@@ -31,19 +26,11 @@ class WelcomeController: UIViewController {
     }()
     
     let nextButton = GDButton(title: "START WINNING", type: .roundedText)
-    
-    /*= {
-        let button = UIButton()
-//        button.translatesAutoresizingMaskIntoConstraints = false
-//        button.backgroundColor = .white
-//        button.setTitle("START WINNING", for: .normal)
-        return button
-    }()*/
+
     
     let copyrightLabel = GDLabel(title: "© 2018 | NAZ Apps", color: .grayOne , size: 14, textAlign: .center)
     
     @objc func handleNext() {
-//        print("trying to handle next")
         UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 0.9, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
             self.nextButton.transform = CGAffineTransform(scaleX: 0.92, y: 0.92)
         }) { (_) in
@@ -62,9 +49,6 @@ class WelcomeController: UIViewController {
         
         view.backgroundColor = .white
         
-//        titleLabel.text = "ToDooDaBuDiDoo"
-//        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        
         view.addSubview(bg)
         bg.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
         bg.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
@@ -78,7 +62,6 @@ class WelcomeController: UIViewController {
         titleLabel.topAnchor.constraint(equalTo: bg.topAnchor, constant: 60).isActive = true
         
         bg.addSubview(infoLabel)
-//        infoLabel.numberOfLines = 2
         infoLabel.centerXAnchor.constraint(equalTo: bg.centerXAnchor).isActive = true
         infoLabel.centerYAnchor.constraint(equalTo: bg.centerYAnchor).isActive = true
         infoLabel.widthAnchor.constraint(equalToConstant: 300).isActive = true
