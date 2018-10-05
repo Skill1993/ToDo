@@ -10,19 +10,29 @@ import UIKit
 
 class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
     
-    var popupLocation:CGFloat = 70
-    
     func openAddItemPopup() {
-        popup.animateView(transform: CGAffineTransform(translationX: 0, y: popupLocation), duration: 0.3)
-        if popupLocation == 70 {
-            popupLocation = 0
-        } else {
-            popupLocation = 70
+        popup.animatePopup()
+    }
+    
+    func notInList(text: String) -> Bool {
+        var isNotInList = true
+        self.listData.forEach { (toDo) in
+            if toDo.title == text {
+                isNotInList = false
+            }
         }
+        return isNotInList
     }
     
     func addItemToList(text: String) {
-        print("trying to handle add item")
+        if (notInList(text: text)){
+            let newItem = ToDo(id: self.listData.count, title: text ,status: false)
+            self.listData.append(newItem)
+            self.listTable.reloadData()
+            self.updateHeaderItemLeft()
+            self.popup.textField.text = ""
+            self.popup.animatePopup()
+        }
     }
 
     let header = GDHeaderView(title: "Stuff to get done", subtitle: "4 left")
