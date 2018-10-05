@@ -10,14 +10,21 @@ import UIKit
 
 class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
     
-    func addItemToList(text: String) {
-        print("text in the textfield is: \(text)")
-    }
+    var popupLocation:CGFloat = 70
     
     func openAddItemPopup() {
-        print("trying to open item popup view")
+        popup.animateView(transform: CGAffineTransform(translationX: 0, y: popupLocation), duration: 0.3)
+        if popupLocation == 70 {
+            popupLocation = 0
+        } else {
+            popupLocation = 70
+        }
     }
     
+    func addItemToList(text: String) {
+        print("trying to handle add item")
+    }
+
     let header = GDHeaderView(title: "Stuff to get done", subtitle: "4 left")
     let popup = GDNewItemPopUp()
     let tbInset:CGFloat = 16
@@ -88,6 +95,8 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
         popup.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
         popup.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
         popup.heightAnchor.constraint(equalToConstant: 80).isActive = true
+        
+        openAddItemPopup()
         
         popup.textField.delegate = self
         popup.delegate = self
