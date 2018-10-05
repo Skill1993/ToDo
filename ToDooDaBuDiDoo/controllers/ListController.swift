@@ -38,6 +38,7 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
     let header = GDHeaderView(title: "Stuff to get done", subtitle: "4 left")
     let popup = GDNewItemPopUp()
     let tbInset:CGFloat = 16
+    var bgBottom: NSLayoutConstraint!
     lazy var bg: UIView = {
         let view = GDGradient()
         view.backgroundColor = .cyan
@@ -72,11 +73,7 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        listData = [
-            ToDo(id: 0, title: "First Item", status: false),
-            ToDo(id: 1, title: "Hey Dude", status: true),
-            ToDo(id: 2, title: "It's Lit fam", status: false)
-        ]
+        listData = []
         
         self.updateHeaderItemLeft()
         
@@ -92,7 +89,8 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
         bg.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
         bg.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 20).isActive = true
         bg.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20).isActive = true
-        bg.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100).isActive = true
+        bgBottom = bg.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100)
+        bgBottom.isActive = true
         
         view.addSubview(listTable)
         listTable.leftAnchor.constraint(equalTo: bg.leftAnchor, constant: tbInset).isActive = true
@@ -126,11 +124,36 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
 
 extension ListController: UITextFieldDelegate {
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        popup.animateView(transform: CGAffineTransform(translationX: 0, y: -self.keyboardHeight), duration: 0.60)
+
+        var heightToAnimate = -keyboardHeight - 20
+        
+        if textField == popup.textField {
+            popup.animateView(transform: CGAffineTransform(translationX: 0, y: -self.keyboardHeight), duration: 0.50)
+            heightToAnimate -= 80
+        }
+        self.bgBottom.constant = heightToAnimate
+        UIView.animate(withDuration:0.35){
+            self.view.layoutIfNeeded()
+        }
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
-        popup.animateView(transform: CGAffineTransform(translationX: 0, y: 0), duration: 0.60)
+
+        self.bgBottom.constant = -100
+        UIView.animate(withDuration:0.35){
+            self.view.layoutIfNeeded()
+        }
+        if textField == popup.textField {
+            popup.animateView(transform: CGAffineTransform(translationX: 0, y: 0), duration: 0.60)
+        } else {
+            
+        }
+
     }
 }
 
@@ -191,6 +214,7 @@ extension ListController: UITableViewDelegate, UITableViewDataSource, GDListCell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID, for: indexPath) as! GDListCell
         cell.delegate = self
+        cell.textField.delegate = self
         var itemsForSection: [ToDo] = []
         self.listData.forEach { (toDo) in
             if indexPath.section == 0 && !toDo.status {
