@@ -28,6 +28,7 @@
 		3FBCB4E621616FA000B71C51 /* ToDooDaBuDiDoo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3FBCB4E421616FA000B71C51 /* ToDooDaBuDiDoo.xcdatamodeld */; };
 		3FBCB4E821616FDF00B71C51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FBCB4E721616FDF00B71C51 /* Assets.xcassets */; };
 		3FBCB4EB21616FDF00B71C51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FBCB4E921616FDF00B71C51 /* LaunchScreen.storyboard */; };
+		3FEA1A6621679282001C9FD7 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEA1A6521679282001C9FD7 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		3FBCB4E721616FDF00B71C51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FBCB4EA21616FDF00B71C51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FBCB4EC21616FE000B71C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FEA1A6521679282001C9FD7 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				3FBCB4E921616FDF00B71C51 /* LaunchScreen.storyboard */,
 				3FBCB4EC21616FE000B71C51 /* Info.plist */,
 				3FBCB4E421616FA000B71C51 /* ToDooDaBuDiDoo.xcdatamodeld */,
+				3FEA1A6521679282001C9FD7 /* CoreDataManager.swift */,
 			);
 			path = ToDooDaBuDiDoo;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				3F04E35721662B6700F7D580 /* GDCheckBox.swift in Sources */,
 				3F320B9C2163B19E00FD2A7D /* GDNewItemPopUp.swift in Sources */,
 				3F320B842161843500FD2A7D /* GDGradient.swift in Sources */,
+				3FEA1A6621679282001C9FD7 /* CoreDataManager.swift in Sources */,
 				3FBCB4E621616FA000B71C51 /* ToDooDaBuDiDoo.xcdatamodeld in Sources */,
 				3F320B8A21622E0700FD2A7D /* GDLabel.swift in Sources */,
 				3F320B9E2164BFDA00FD2A7D /* GDTextField.swift in Sources */,

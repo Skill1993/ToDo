@@ -19,10 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let wc = WelcomeController()
         
-//        for family in UIFont.familyNames.sorted() {
-//            let names = UIFont.fontNames(forFamilyName: family)
-//            print("Family: \(family), font names :\(names)")
-//        }
+//        CoreDataManager.shared.createToDo()
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
@@ -52,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-        self.saveContext()
+        // self.saveContext()
     }
 
     
