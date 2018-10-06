@@ -14,8 +14,8 @@ class GDListCell: UITableViewCell {
     
     @objc func toggleStatus() {
         if let delegate = self.delegate, let toDo = self.toDo {
-            let newToDo = ToDo(id: toDo.id,title: textField.text!, status: !toDo.status)
-            delegate.toggleToDo(toDo: newToDo)
+//            let newToDo = ToDo(id: toDo.id,title: textField.text!, status: !toDo.status)
+//            delegate.toggleToDo(toDo: newToDo)
         }
     }
     
@@ -32,7 +32,7 @@ class GDListCell: UITableViewCell {
         didSet {
             if let toDo = toDo {
                 box.toggled = toDo.status
-                box.id = toDo.id
+//                box.id = toDo.id
                 self.textField.text = toDo.title
             }
 

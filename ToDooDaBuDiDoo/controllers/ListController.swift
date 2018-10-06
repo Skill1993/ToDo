@@ -26,8 +26,8 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
     
     func addItemToList(text: String) {
         if (notInList(text: text)){
-            let newItem = ToDo(id: self.listData.count, title: text ,status: false)
-            self.listData.append(newItem)
+//            let newItem = ToDo(id: self.listData.count, title: text ,status: false)
+//            self.listData.append(newItem)
             self.listTable.reloadData()
             self.updateHeaderItemLeft()
             self.popup.textField.text = ""
@@ -73,6 +73,7 @@ class ListController: UIViewController, GDHeaderDelegate, GDNewItemDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        listData = CoreDataManager.shared.fetchToDos()
         listData = []
         
         self.updateHeaderItemLeft()
