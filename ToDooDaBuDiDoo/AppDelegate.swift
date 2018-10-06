@@ -17,11 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let wc = WelcomeController()
+        let hasVisitedWelcomeController = UserDefaults.standard.bool(forKey: "welcome-controller-visited")
+        let initialController = hasVisitedWelcomeController ? ListController() : WelcomeController()
                 
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        window?.rootViewController = wc
+        window?.rootViewController = initialController
         
         return true
     }
